@@ -2,21 +2,16 @@
 
 # Define a function to be called when the user presses '1'
 my_function() {
-    echo "Wallpapers"
+    echo "CROS-MSTR Wallpapers: 1) Change Lock/Login Screen Preview Wallpapers 2) Change Default Wallpapers"
     # You can add your commands here
     # Define a function to be called when the user presses '1'
 }
 my_function1() {
-    echo "Please put the wallpaper folder in MyFiles. (it's what contains Downloads in the file manager), then press a number. 1. Push Default wallpapers 2. Push LS Wallpapers"
+    echo "If it doesn't work, Please put the wallpaper folder in MyFiles and do not rename them."
     # You can add your commands here
 }
 
-if [[ $user_input == "1"]]; then
-    my_function1
-else if [[ $user_input == "2"]]
-sudo cp -r -v MyFiles/wallpapers /home/chronos
-    echo "Pushed."
-fi
+
 
 
 
@@ -28,4 +23,10 @@ if [[ $user_input == "1"; then
     my_function
 else
     echo "You did not press '1'. Exiting."
+fi
+if [[ $user_input == "2"]]; then
+sudo cp -r -v MyFiles/custom_wallpapers /home/chronos
+else if [[ $user_input == "1"]]
+sudo cp -r -v MyFiles/wallpapers /home/chronos
+    echo "Pushed."
 fi
